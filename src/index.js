@@ -1,16 +1,28 @@
-// Cryptographic shuffle using cryptoRandom()
-const crypto = require('crypto');
-export function cryptoShuffleArray(array) {
-return array
-.map(value => ({ value, sort: crypto.randomInt(0, 2 ** 32) }))
-.sort((a, b) => a.sort - b.sort)
-.map(({ value }) => value);
-};
-
-export default function shuffleArray(array) {
-  return array
-    .map(value => ({ value, sort: Math.random() }))
-    .sort((currentItem, nextItem) => currentItem.sort - nextItem.sort)
-    .map(({ value }) => value);
-};
-
+module.exports = {
+  generateStrongPassword: (length = 12) => {
+    const allowedPasswordCharacters =
+      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+";
+    const strongPassword = Array
+      .from(
+        { length },
+        () => {
+          const randomAllowedPasswordCharacterIndex =
+            Math.floor(Math.random() * allowedPasswordCharacters.length);
+          const randomAllowedPasswordCharacter =
+            allowedPasswordCharacters.charAt(randomAllowedPasswordCharacterIndex);
+          return randomAllowedPasswordCharacter;
+        })
+      .join('');
+    return strongPassword;
+  },
+  isStrongPassword: (password) => {
+    if (password.length < 8) {
+      return false;
+    }
+    const isPasswordStrong = /[A-Z]/.test(password) &&
+      /[a-z]/.test(password) &&
+      /\d/.test(password) &&
+      /[!@#$%^&*()_+]/.test(password);
+    return isPasswordStrong;
+  }
+}

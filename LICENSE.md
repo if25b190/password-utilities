@@ -1,4 +1,4 @@
-Copyright (c) 2026-current if25b050
+Copyright (c) 2025-current Philip Duong & Martin Six
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
