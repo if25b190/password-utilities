@@ -28,7 +28,7 @@ yarn add @if25b050/password-utilities
 Basic Usage
 
 ```js
-import * as passwordUtilities from '@if25b050/password-utilities';
+import passwordUtilities from '@if25b050/password-utilities';
 
 const strongPW = passwordUtilities.generateStrongPassword(12);
 const isStrongPW = passwordUtilities.isStrongPassword(strongPW);
