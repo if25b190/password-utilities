@@ -1,5 +1,8 @@
 module.exports = {
   generateStrongPassword: (length = 12) => {
+    if (length < 8) {
+      throw new Error("Length must be 8 or higher");
+    }
     const allowedPasswordCharacters =
       "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+";
     let strongPassword = "";

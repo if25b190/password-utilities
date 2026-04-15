@@ -1,5 +1,14 @@
 const passwordUtilities = require('../dist/index');
 
+describe('generateStrongPasswordWithLowLength', () => {
+  test('generates a strong password with a length of 4', () => {
+    const callFunc = () => {
+      passwordUtilities.generateStrongPassword(4);
+    };
+    expect(callFunc).toThrow("Length must be 8 or higher");
+  });
+});
+
 describe('generateStrongPassword', () => {
   test('generates a strong password with a length of 16', () => {
     const generatedPassword = passwordUtilities.generateStrongPassword(16);
