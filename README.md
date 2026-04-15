@@ -6,7 +6,6 @@
 
 - [Installation](#installation)
 - [Usage](#usage)
-   - [Examples](#examples)
 - [Contribution](#contribution)
 - [Security](#security)
 - [License](#license)
@@ -29,8 +28,15 @@ yarn add @if25b050/password-utilities
 Basic Usage
 
 ```js
-import ??? from '@if25b050/password-utilities';
+import * as passwordUtilities from '@if25b050/password-utilities';
 
+const strongPW = passwordUtilities.generateStrongPassword(12);
+const isStrongPW = passwordUtilities.isStrongPassword(strongPW);
+const isNotStrongPW = passwordUtilities.isStrongPassword("W");
+
+console.log(strongPW);      // e.g., "pC%mD8TpCKn2"
+console.log(isStrongPW);    // e.g., true
+console.log(isNotStrongPW); // e.g., false
 ```
 
 ## Contribution
