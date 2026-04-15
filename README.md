@@ -1,12 +1,11 @@
-# @yourusername/shuffle-array (Class 2 Example)
+# @if25b050/password-utilities
 
-> A small library that takes an array as input and returns a new array that is shuffled.
+> A small library that provides utility functions to generate and check a strong password.
 
 ## Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
-   - [Examples](#examples)
 - [Contribution](#contribution)
 - [Security](#security)
 - [License](#license)
@@ -16,12 +15,12 @@
 Install via npm:
 
 ```bash
-npm install @yourusername/shuffle-array
+npm install @if25b050/password-utilities
 ```
 Install via yarn:
 
 ```bash
-yarn add @yourusername/shuffle-array
+yarn add @if25b050/password-utilities
 ```
 
 ## Usage
@@ -29,37 +28,15 @@ yarn add @yourusername/shuffle-array
 Basic Usage
 
 ```js
-import shuffleArray from '@yourusername/shuffle-array';
+import * as passwordUtilities from '@if25b050/password-utilities';
 
-const startArray = [1, 2, 3, 4, 5];
-const newShuffledArray = shuffleArray(startArray);
+const strongPW = passwordUtilities.generateStrongPassword(12);
+const isStrongPW = passwordUtilities.isStrongPassword(strongPW);
+const isNotStrongPW = passwordUtilities.isStrongPassword("W");
 
-console.log(startArray);       // e.g., [1, 2, 3, 4, 5]
-console.log(newShuffledArray); // e.g., [3, 1, 5, 2, 4]
-```
-
-### Examples
-
-Shuffle a list of user IDs:
-
-```js
-import shuffleArray from '@yourusername/shuffle-array';
-
-const userIds = ['u1', 'u2', 'u3', 'u4'];
-const randomizedOrderOfUserIds = shuffleArray(userIds);
-
-console.log(randomizedOrderOfUserIds); // e.g., ['u1', 'u3', 'u4', 'u2']
-```
-
-Use in a game for randomizing cards:
-
-```js
-import shuffleArray from '@yourusername/shuffle-array';
-
-const deck = ['Ace of Spades', 'Two of Hearts']; // some card deck
-const shuffledDeck = shuffleArray(deck);
-
-console.log(shuffledDeck); // e.g., ['Two of Hearts', 'Ace of Spades', ...]
+console.log(strongPW);      // e.g., "pC%mD8TpCKn2"
+console.log(isStrongPW);    // e.g., true
+console.log(isNotStrongPW); // e.g., false
 ```
 
 ## Contribution

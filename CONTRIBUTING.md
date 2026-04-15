@@ -27,7 +27,7 @@
 1. **Clone the repository**:
    ```sh
    git clone https://github.com/if25b190/password-utilities.git
-   cd shuffle-array
+   cd password-utilities
    ```
 2. **Install dependencies**:
    ```sh
@@ -45,5 +45,5 @@
 ## Committing Changes
 
 Please follow these guidelines for commit messages and pull requests:
-- **Commit Message Format**: Commit messages should be descriptive, e.g., `feat: add new shuffle algorithm` following the [Conventional Commits Specification](https://www.conventionalcommits.org/en). It is easy to follow if you are using the [semantic-git-commit-cli](https://www.npmjs.com/package/semantic-git-commit-cli)
+- **Commit Message Format**: Commit messages should be descriptive, e.g., `feat: add new password generator` following the [Conventional Commits Specification](https://www.conventionalcommits.org/en). It is easy to follow if you are using the [semantic-git-commit-cli](https://www.npmjs.com/package/semantic-git-commit-cli)
 - **Pull Request**: If you open a Pull Request please follow the [PULL_REQUEST_TEMPLATE.md](./.github/PULL_REQUEST_TEMPLATE.md).
