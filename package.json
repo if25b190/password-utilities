@@ -1,0 +1,33 @@
+{
+  "name": "@if25b050/password-utilities",
+  "version": "0.1.0",
+  "description": "A small library that provides utility functions to generate and check a strong password.",
+  "main": "dist/index.js",
+  "umd:main": "dist/index.umd.js",
+  "module": "dist/index.m.js",
+  "source": "src/index.js",
+  "scripts": {
+    "build": "microbundle",
+    "pretest": "npm run build",
+    "test": "npx jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/if25b190/password-utilities.git"
+  },
+  "keywords": [
+    "password",
+    "utilities",
+    "security"
+  ],
+  "author": "if25b190 <example@test.com> (https://yourwebsite.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/if25b190/password-utilities/issues"
+  },
+  "homepage": "https://github.com/if25b190/password-utilities#readme",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "microbundle": "^0.15.1"
+  }
+}
