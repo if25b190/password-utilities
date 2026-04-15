@@ -1,6 +1,6 @@
 {
   "name": "@if25b050/password-utilities",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A small library that provides utility functions to generate and check a strong password.",
   "main": "dist/index.js",
   "umd:main": "dist/index.umd.js",
